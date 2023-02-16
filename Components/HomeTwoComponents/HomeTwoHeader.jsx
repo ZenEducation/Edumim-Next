@@ -1,37 +1,41 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useRef, useState } from "react";
-import wfb from "../../assets/images/social/wfb.svg";
-import wt from "../../assets/images/social/wt.svg";
-import wi from "../../assets/images/social/w-i.svg";
-import wins from "../../assets/images/social/w-ins.svg";
-import search from "../../assets/images/svg/search.svg";
-import logo from "../../assets/images/logo/logo.svg";
-import man2 from "../../assets/images/banner/man2.png";
-import { Link } from "react-router-dom";
+import wfb from "../../public/assets/images/social/wfb.svg";
+import wt from "../../public/assets/images/social/wt.svg";
+import wi from "../../public/assets/images/social/w-i.svg";
+import wins from "../../public/assets/images/social/w-ins.svg";
+import search from "../../public/assets/images/svg/search.svg";
+import logo from "../../public/assets/images/logo/logo.svg";
+import man2 from "../../public/assets/images/banner/man2.png";
+import Link from "next/link";
 import MobileMenu from "../MobileMenu";
 const HomeTwoHeader = () => {
   const scrollNav = useRef(null);
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
   const [showSearchBar, setShowSearchBar] = useState(false);
-  let body = document.querySelector("body");
   const handleShowSearchBar = () => {
     setShowSearchBar(!showSearchBar);
   };
   useEffect(() => {
     // scrolling nav
-    window.addEventListener("scroll", () => {
-      let windowScroll = window.scrollY > 100;
-      scrollNav.current.classList.toggle("rt-sticky-active", windowScroll);
-    });
+    // try {
+    //   let body = document.querySelector("body");
+    //   window.addEventListener("scroll", () => {
+    //     let windowScroll = window.scrollY > 100;
+    //     scrollNav.current.classList.toggle("rt-sticky-active", windowScroll);
+    //   });
+    //   showSearchBar
+    //     ? body.classList.add("modal-open")
+    //     : body.classList.remove("modal-open");
+    //   body.classList.contains("modal-open")
+    //     ? (document.documentElement.scrollTop = 0)
+    //     : "";
+    // } catch (err) {
+    //   console.log(err);
+    // }
   }, []);
-  showSearchBar
-    ? body.classList.add("modal-open")
-    : body.classList.remove("modal-open");
 
-  body.classList.contains("modal-open")
-    ? (document.documentElement.scrollTop = 0)
-    : "";
   return (
     <section className=" xl:min-h-screen bg-[url('../images/banner/2.png')] bg-cover bg-no-repeat bg-center overflow-hidden xl:pb-[130px]">
       <header className="site-header ">
@@ -79,7 +83,7 @@ const HomeTwoHeader = () => {
           <div className="container">
             <div className=" flex items-center justify-between ">
               <Link
-                to={"/react-templates/edumim"}
+                href="/react-templates/edumim"
                 className="brand-logo flex-none lg:mr-10 md:w-auto max-w-[120px]  "
               >
                 <img src={logo} alt="" />
@@ -91,15 +95,18 @@ const HomeTwoHeader = () => {
                       <a href="#">Home</a>
                       <ul className="sub-menu">
                         <li>
-                          <Link to={"/react-templates/edumim"}> Home One</Link>
+                          <Link href={"/react-templates/edumim"}>
+                            {" "}
+                            Home One
+                          </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/home-two"}>
+                          <Link href={"/react-templates/edumim/home-two"}>
                             Home Two
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/home-three"}>
+                          <Link href={"/react-templates/edumim/home-three"}>
                             Home Three
                           </Link>
                         </li>
@@ -109,44 +116,46 @@ const HomeTwoHeader = () => {
                       <a href="#">Pages</a>
                       <ul className="sub-menu">
                         <li>
-                          <Link to={"/react-templates/edumim/about"}>
+                          <Link href={"/react-templates/edumim/about"}>
                             About 1
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/about-two"}>
+                          <Link href={"/react-templates/edumim/about-two"}>
                             About 2
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/instructor"}>
+                          <Link href={"/react-templates/edumim/instructor"}>
                             Instructor
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/instructor-two"}>
+                          <Link href={"/react-templates/edumim/instructor-two"}>
                             Instructor 2
                           </Link>
                         </li>
                         <li>
                           <Link
-                            to={"/react-templates/edumim/instructor-details"}
+                            href={"/react-templates/edumim/instructor-details"}
                           >
                             Instructor Single
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/event"}>
+                          <Link href={"/react-templates/edumim/event"}>
                             Event
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/event-single"}>
+                          <Link href={"/react-templates/edumim/event-single"}>
                             Event Single
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/error"}>404</Link>
+                          <Link href={"/react-templates/edumim/error"}>
+                            404
+                          </Link>
                         </li>
                       </ul>
                     </li>
@@ -154,17 +163,19 @@ const HomeTwoHeader = () => {
                       <a href="#">Courses</a>
                       <ul className="sub-menu">
                         <li>
-                          <Link to={"/react-templates/edumim/courses"}>
+                          <Link href={"/react-templates/edumim/courses"}>
                             Courses
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/courses-sidebar"}>
+                          <Link
+                            href={"/react-templates/edumim/courses-sidebar"}
+                          >
                             Courses Sidebar
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/single-course"}>
+                          <Link href={"/react-templates/edumim/single-course"}>
                             Single Course
                           </Link>
                         </li>
@@ -174,19 +185,19 @@ const HomeTwoHeader = () => {
                       <a href="#">Blog</a>
                       <ul className="sub-menu">
                         <li>
-                          <Link to={"/react-templates/edumim/blog-standard"}>
+                          <Link href={"/react-templates/edumim/blog-standard"}>
                             Blog Standard
                           </Link>
                         </li>
                         <li>
-                          <Link to={"/react-templates/edumim/single-blog"}>
+                          <Link href={"/react-templates/edumim/single-blog"}>
                             Blog Single
                           </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link to={"/react-templates/edumim/contacts"}>
+                      <Link href={"/react-templates/edumim/contacts"}>
                         Contacts
                       </Link>
                     </li>

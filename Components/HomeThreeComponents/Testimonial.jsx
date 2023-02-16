@@ -1,18 +1,18 @@
 import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative, Navigation } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { EffectCreative, Navigation } from "swiper";
 import { t1 } from "../../constant/images";
-import "swiper/css/bundle";
-import "swiper/css";
-import "swiper/css/effect-creative";
-import "swiper/css/navigation";
+// import "swiper/css/bundle";
+// import "swiper/css";
+// import "swiper/css/effect-creative";
+// import "swiper/css/navigation";
 
 const Testimonial = () => {
   const prevBtn = useRef(null);
   const nextBtn = useRef(null);
   return (
     <div className=" section-padding bg-[url('../images/all-img/section-bg-12.png')]  bg-no-repeat bg-cover">
-      <Swiper
+      {/* <Swiper
         navigation={{
           prevEl: ".slickprev",
           nextEl: ".slicknext",
@@ -146,7 +146,7 @@ const Testimonial = () => {
             <iconify-icon icon="heroicons:arrow-right-20-solid"></iconify-icon>
           </button>
         </div>
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 };

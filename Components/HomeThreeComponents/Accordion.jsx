@@ -1,4 +1,4 @@
-import { Disclosure } from "@headlessui/react";
+// import { Disclosure } from "@headlessui/react";
 import React from "react";
 import { faq } from "../../constant/images";
 
@@ -13,7 +13,7 @@ const Accordion = () => {
               General <span className="shape-bg">Questions</span>
             </div>
             <ul className="list accrodains space-y-[30px] lg:max-w-[470px]">
-              <Disclosure >
+              {/* <Disclosure >
                 {({ open }) => (
                   <li className={open ? "open" : null} >
                     <Disclosure.Button type="button" className="accrodain-button">
@@ -80,9 +80,7 @@ const Accordion = () => {
                   </li>
                 )}
 
-              </Disclosure>
-
-
+              </Disclosure> */}
             </ul>
           </div>
           <div>

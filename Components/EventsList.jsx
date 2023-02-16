@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { e1, e2, e3, e4, e5, e6, e7, e8, e9 } from "../constant/images";
 
 const EventsList = () => {
@@ -40,7 +40,7 @@ const EventsList = () => {
               <div className="course-content p-8">
                 <h4 className=" text-xl mb-5 font-bold">
                   <Link
-                    to={"/react-templates/edumim/event-single"}
+                    href={"/react-templates/edumim/event-single"}
                     className=" hover:text-primary transition duration-150"
                   >
                     International Art Fair 2022
@@ -61,7 +61,7 @@ const EventsList = () => {
                   </li>
                 </ul>
                 <Link
-                  to={"/react-templates/edumim/event-single"}
+                  href={"/react-templates/edumim/event-single"}
                   className="btn px-8 py-[11px] bg-black text-white hover:bg-primary"
                 >
                   Book A Seat

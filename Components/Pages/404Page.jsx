@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { error404 } from "../../constant/images";
 import Footer from "../Footer";
 import Header from "../Header";
@@ -17,7 +17,7 @@ const ErrorPage = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor labore et dolore magna aliqua.
           </div>
-          <Link to={"/react-templates/edumim"} className="btn btn-primary">
+          <Link href={"/react-templates/edumim"} className="btn btn-primary">
             Back To Home
           </Link>
         </div>

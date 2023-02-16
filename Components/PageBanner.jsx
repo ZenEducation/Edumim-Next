@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const PageBanner = ({ pageName, pageTitle, num, title }) => {
   useEffect(() => {
@@ -12,7 +12,7 @@ const PageBanner = ({ pageName, pageTitle, num, title }) => {
         <nav>
           <ol className="flex items-center justify-center space-x-3">
             <li className="breadcrumb-item">
-              <Link to={"/react-templates/edumim/home"}> Pages</Link>
+              <Link href={"/react-templates/edumim/home"}> Pages</Link>
             </li>
             <li className="breadcrumb-item">-</li>
             <li className="text-primary">

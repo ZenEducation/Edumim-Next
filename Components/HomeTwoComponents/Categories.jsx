@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import ct1 from "../../assets/images/icon/ct1.svg";
-import ct2 from "../../assets/images/icon/ct2.svg";
-import ct3 from "../../assets/images/icon/ct3.svg";
-import ct4 from "../../assets/images/icon/ct4.svg";
-import ct5 from "../../assets/images/icon/ct5.svg";
-import ct6 from "../../assets/images/icon/ct6.svg";
+import ct1 from "../../public/assets/images/icon/ct1.svg";
+import ct2 from "../../public/assets/images/icon/ct2.svg";
+import ct3 from "../../public/assets/images/icon/ct3.svg";
+import ct4 from "../../public/assets/images/icon/ct4.svg";
+import ct5 from "../../public/assets/images/icon/ct5.svg";
+import ct6 from "../../public/assets/images/icon/ct6.svg";
 const Categories = () => {
   return (
     <div className="feature-area bg-[url('../images/all-img/section-bg-6.png')] bg-cover bg-no-repeat bg-center section-padding">

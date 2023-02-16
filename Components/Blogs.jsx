@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 // import { Link } from "react-router-dom";
-import { Link } from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import blog1 from "../public/assets/images/all-img/blog-1.png";
 import blog2 from "../public/assets/images/all-img/blog-2.png";
@@ -20,9 +20,9 @@ const Blogs = () => {
             </div>
           </div>
           <div className="mb-3">
-            <a href="#" className=" btn btn-primary">
-              Read All Blogs
-            </a>
+            <Link href="#">
+              <p className=" btn btn-primary">Read All Blogs</p>
+            </Link>
           </div>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px] pt-7">

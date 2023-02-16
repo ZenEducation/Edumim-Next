@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Disclosure, Tab } from "@headlessui/react";
+// import { Disclosure, Tab } from "@headlessui/react";
 import React, { Fragment } from "react";
 import {
   author,
@@ -90,7 +90,7 @@ const CourseDetails = () => {
                   </span>
                 </div>
               </div>
-              <Tab.Group>
+              {/* <Tab.Group>
                 <div className="nav-tab-wrapper mt-12">
                   <Tab.List as="ul" id="tabs-nav" className="course-tab mb-8">
                     {["OverView", "Carriculum", "Instructor", "Reviews"].map(
@@ -1081,7 +1081,7 @@ const CourseDetails = () => {
                     </Tab.Panel>
                   </Tab.Panels>
                 </div>
-              </Tab.Group>
+              </Tab.Group> */}
             </div>
           </div>
           <div className="lg:col-span-4 col-span-12">

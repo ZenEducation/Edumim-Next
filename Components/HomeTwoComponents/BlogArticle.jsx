@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { blogArticleData } from "../../constant/dummyData";
 import { calender2, clock2 } from "../../constant/images";
 
@@ -38,7 +38,7 @@ const BlogArticle = () => {
                 </div>
                 <h4 className=" lg:text-2xl lg:leading-[36px] text-1xl mb-4 font-bold">
                   <Link
-                    to={'/react-templates/edumim/singleblog'}
+                    href="/react-templates/edumim/singleblog"
                     className=" group-hover:text-primary transitio duration-150"
                   >
                     {item.title}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
-import { useNavigate } from "react-router-dom";
+// import emailjs from "@emailjs/browser";
+// import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -8,7 +8,7 @@ const ContactForm = () => {
   const [webAdress, setWebAdress] = useState();
   const [message, setMessage] = useState();
   const [loading, setLoading] = useState(false);
-  const naviget = useNavigate();
+  // const naviget = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,27 +21,27 @@ const ContactForm = () => {
     };
     console.log(templateParams);
 
-    emailjs
-      .send(
-        "service_ns6jxe8",
-        "template_oxnjbzr",
-        templateParams,
-        "VrrYupDuebtgZisdc"
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setEmail("");
-          setName("");
-          setMessage("");
-          naviget("/react-templates/edumim/thanks");
-          setLoading(false);
-        },
-        (err) => {
-          setLoading(false);
-          console.log("FAILED...", err);
-        }
-      );
+    // emailjs
+    //   .send(
+    //     "service_ns6jxe8",
+    //     "template_oxnjbzr",
+    //     templateParams,
+    //     "VrrYupDuebtgZisdc"
+    //   )
+    //   .then(
+    //     (response) => {
+    //       console.log("SUCCESS!", response.status, response.text);
+    //       setEmail("");
+    //       setName("");
+    //       setMessage("");
+    //       naviget("/react-templates/edumim/thanks");
+    //       setLoading(false);
+    //     },
+    //     (err) => {
+    //       setLoading(false);
+    //       console.log("FAILED...", err);
+    //     }
+    //   );
   };
   return (
     <form
@@ -85,7 +85,7 @@ const ContactForm = () => {
         ></textarea>
       </div>
       <button class="btn btn-primary mt-[10px]" type="submit" name="submit">
-        {loading ? 'sending..' : 'Send Message'}
+        {loading ? "sending.." : "Send Message"}
       </button>
     </form>
   );

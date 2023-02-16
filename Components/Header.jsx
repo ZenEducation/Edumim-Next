@@ -11,11 +11,15 @@ const Header = () => {
   const scrollNav = useRef(null);
   useEffect(() => {
     //scrolling nav
-    window.addEventListener("scroll", () => {
-      let windowScroll = window.scrollY > 100;
-      scrollNav.current.classList.toggle("rt-sticky-active", windowScroll);
-      scrollNav.current.classList.toggle("sticky", windowScroll);
-    });
+    try {
+      window.addEventListener("scroll", () => {
+        let windowScroll = window.scrollY > 100;
+        scrollNav.current.classList.toggle("rt-sticky-active", windowScroll);
+        scrollNav.current.classList.toggle("sticky", windowScroll);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }, []);
 
   return (

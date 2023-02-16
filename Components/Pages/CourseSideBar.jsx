@@ -30,7 +30,7 @@ const CourseSideBar = () => {
                 classNameForTabTwo={"grid  grid-cols-1 gap-[30px]"}
               />
             </div>
-            <div class="lg:col-span-4 col-span-12">
+            <div className="lg:col-span-4 col-span-12">
               <SideBar />
             </div>
           </div>
@@ -44,7 +44,7 @@ const CourseSideBar = () => {
 export default CourseSideBar;
 
 const SideBar = () => {
-  const [priceVal, setPriceVal] = useState(0)
+  const [priceVal, setPriceVal] = useState(0);
   return (
     <div className="sidebarWrapper space-y-[30px]">
       <div className="wdiget widget_search">
@@ -66,8 +66,14 @@ const SideBar = () => {
       <div className="wdiget widget_catagory">
         <h4 className="widget-title">Price Filter</h4>
         {/* <div className="slider-range"></div> */}
-    
-        <input type="range" max={10000} min={1500} className="slider-range" onChange={(e) => setPriceVal(e.target.value)} />
+
+        <input
+          type="range"
+          max={10000}
+          min={1500}
+          className="slider-range"
+          onChange={(e) => setPriceVal(e.target.value)}
+        />
         <div className="price_slider_amount">
           <div className=" mt-6">
             <div className="flex space-x-2 text-xl font-medium text-black">

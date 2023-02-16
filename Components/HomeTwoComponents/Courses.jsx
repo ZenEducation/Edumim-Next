@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
-import c1 from "../../assets/images/all-img/c1.png";
-import c2 from "../../assets/images/all-img/c2.png";
-import c3 from "../../assets/images/all-img/c3.png";
-import c4 from "../../assets/images/all-img/c4.png";
-import c5 from "../../assets/images/all-img/c5.png";
-import c6 from "../../assets/images/all-img/c6.png";
+import c1 from "../../public/assets/images/all-img/c1.png";
+import c2 from "../../public/assets/images/all-img/c2.png";
+import c3 from "../../public/assets/images/all-img/c3.png";
+import c4 from "../../public/assets/images/all-img/c4.png";
+import c5 from "../../public/assets/images/all-img/c5.png";
+import c6 from "../../public/assets/images/all-img/c6.png";
 import { file2, review, user2 } from "../../constant/images";
 const Courses = () => {
   return (
